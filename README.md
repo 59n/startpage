@@ -1,149 +1,181 @@
-# Personal Dashboard - Next.js
+# Personal Dashboard / Startpage
 
-A modern, minimalist personal dashboard and portfolio built with Next.js, optimized for Netlify deployment.
+A modern, minimal personal dashboard built with **Next.js 14**, featuring real-time stats, customizable links, and a clean design. Fully customizable through a single config file.
 
-## 🚀 Features
+![Dashboard Preview](https://img.shields.io/badge/Next.js-14-black?style=flat-square&logo=next.js)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?style=flat-square&logo=typescript)
+![React](https://img.shields.io/badge/React-18-61dafb?style=flat-square&logo=react)
 
-- **Portfolio Page**: Rotating profile cards with social links and quotes
-- **Bookmarks Page**: Organized bookmarks with Google search integration
-- **Stats Dashboard**: Real-time system stats, performance metrics, and nerd analytics
+## ✨ Features
 
-## 📦 Installation
+- 🕐 **Live Clock** - Real-time clock with customizable 12/24-hour format
+- 📊 **System Stats** - Session tracking, display info, performance metrics, system details
+- 🔗 **Quick Links** - Customizable bookmarks with icons
+- 🎨 **Fully Customizable** - Single `config.ts` file to control everything
+- 🌙 **Dark Theme** - Clean, minimal dark design
+- 📱 **Responsive** - Works on desktop, tablet, and mobile
+- ⚡ **Fast Loading** - Optimized Next.js static export
+- 🎯 **No Database** - Purely static, no backend required
+
+## 🚀 Quick Start
 
 ```bash
+# Clone the repository
+git clone https://github.com/59n/startpage.git
+cd startpage
+
 # Install dependencies
 npm install
 
 # Run development server
 npm run dev
-
-# Build for production
-npm run build
 ```
 
-## 🌐 Deployment to Netlify
+Open [http://localhost:3000](http://localhost:3000) to see your dashboard.
 
-### Option 1: Direct Deploy
+## ⚙️ Configuration
 
-1. Push your code to GitHub
-2. Go to [Netlify](https://netlify.com)
-3. Click "New site from Git"
+Everything is customizable through `/config.ts`:
+
+### 🎨 Theme Colors
+```typescript
+theme: {
+  bgPrimary: '#0a0a0a',      // Main background
+  bgSecondary: '#141414',    // Box backgrounds
+  textPrimary: '#e5e5e5',    // Primary text
+  textSecondary: '#888888',  // Secondary text
+  accent: '#4ade80',         // Accent color
+}
+```
+
+### 🔗 Links
+```typescript
+links: [
+  { name: 'YouTube', url: 'https://youtube.com', icon: 'youtube' },
+  { name: 'GitHub', url: 'https://github.com', icon: 'file' },
+  // Add your own links here
+]
+```
+
+### 📊 Stats Visibility
+```typescript
+stats: {
+  showSession: true,      // Time on page, clicks, keypresses
+  showDisplay: true,      // Resolution, viewport, DPR
+  showPerformance: true,  // Load time, DOM ready
+  showSystem: true,       // Browser, platform, CPU cores
+}
+```
+
+### 🕐 Clock Options
+```typescript
+clock: {
+  format24Hour: true,    // 24-hour or 12-hour format
+  showSeconds: true,     // Show/hide seconds
+  dateFormat: 'full',    // 'full', 'short', or 'none'
+}
+```
+
+### 📐 Layout & Spacing
+```typescript
+spacing: {
+  containerMaxWidth: '1000px',
+  statGridColumns: 4,        // Number of stat columns
+  linkGridColumns: 3,        // Number of link columns
+  linkGapHorizontal: '5rem', // Space between links
+}
+```
+
+**See [CONFIG.md](./CONFIG.md) for complete documentation.**
+
+## 🌐 Deployment
+
+### Deploy to Vercel (Recommended)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/59n/startpage)
+
+### Deploy to Netlify
+1. Push to GitHub
+2. Go to [Netlify](https://app.netlify.com)
+3. Click "Add new site" → "Import an existing project"
 4. Select your repository
-5. Build settings are already configured in `netlify.toml`
-6. Click "Deploy site"
+5. Settings are auto-detected via `netlify.toml`
+6. Deploy!
 
-### Option 2: CLI Deploy
-
+### Manual Build
 ```bash
-# Install Netlify CLI
-npm install -g netlify-cli
-
-# Build the site
+# Build static files
 npm run build
 
-# Deploy
-netlify deploy --prod
+# Output will be in ./out directory
+# Upload the out/ folder to any static host
 ```
 
 ## 📁 Project Structure
 
 ```
+startpage/
 ├── app/
-│   ├── layout.tsx          # Root layout with navigation
-│   ├── page.tsx            # Portfolio page
-│   ├── globals.css         # Global styles
-│   ├── bookmarks/
-│   │   └── page.tsx        # Bookmarks page
-│   └── stats/
-│       └── page.tsx        # Stats dashboard
+│   ├── layout.tsx       # Root layout with config injection
+│   ├── page.tsx         # Main dashboard page
+│   └── globals.css      # Global styles
 ├── components/
-│   ├── Navigation.tsx      # Top navigation bar
-│   ├── ProfileCard.tsx     # Portfolio profile carousel
-│   ├── SearchBar.tsx       # Google search bar
-│   ├── BookmarkGrid.tsx    # Bookmark categories
-│   ├── Clock.tsx           # Real-time clock
-│   └── StatsGrid.tsx       # Stats dashboard grid
-├── netlify.toml            # Netlify configuration
-├── next.config.js          # Next.js configuration
+│   ├── Clock.tsx        # Live clock component
+│   ├── SimpleStats.tsx  # Stats display component
+│   └── SimpleBookmarks.tsx # Links component
+├── config.ts            # 🎯 Main configuration file
+├── CONFIG.md            # Configuration documentation
 └── package.json
 ```
 
-## 🎨 Customization
+## 🛠️ Built With
 
-### Update Profile Information
+- [Next.js 14](https://nextjs.org/) - React framework
+- [TypeScript](https://www.typescriptlang.org/) - Type safety
+- [React 18](https://react.dev/) - UI library
+- CSS Variables - Dynamic theming
 
-Edit `/components/ProfileCard.tsx` to customize profiles:
+## 📝 Available Icons
 
+- `youtube` - YouTube
+- `twitter` - Twitter/X
+- `chart` - Trading/Analytics
+- `file` - Files/Notes
+- `mail` - Email
+- `drive` - Google Drive
+- `calendar` - Calendar
+- `docs` - Documents
+- `film` - Movies/Media
+
+## 🎨 Customization Examples
+
+### Minimal Dashboard
 ```typescript
-const profiles = [
-  {
-    name: 'Your Name',
-    title: 'Your Title',
-    quote: 'Your Quote',
-    avatar: 'Y',
-    button: 'Button Text'
-  }
-]
+stats: { showSession: true, showDisplay: false, showPerformance: false, showSystem: false }
+spacing: { statGridColumns: 1 }
 ```
 
-### Update Bookmarks
-
-Edit `/components/BookmarkGrid.tsx` to customize bookmarks:
-
+### Blue Theme
 ```typescript
-const bookmarkCategories = [
-  {
-    title: 'CATEGORY NAME',
-    links: [
-      { icon: '📌', label: 'Link Name', url: 'https://example.com' }
-    ]
-  }
-]
+theme: { accent: '#3b82f6' }
 ```
 
-### Update Social Links
-
-Edit `/components/ProfileCard.tsx` to update social media links in the JSX.
-
-## 🛠️ Tech Stack
-
-- **Framework**: Next.js 14 (App Router)
-- **Language**: TypeScript
-- **Styling**: CSS (Custom)
-- **Deployment**: Netlify (Static Export)
-
-## 📝 Environment Variables
-
-No environment variables required! Everything works out of the box.
-
-## 🎯 Key Features
-
-- ✅ Static export for fast loading
-- ✅ SEO optimized
-- ✅ Fully responsive design
-- ✅ Real-time stats and analytics
-- ✅ Google search integration
-- ✅ Keyboard shortcuts
-- ✅ Dark theme
-- ✅ Smooth animations
-
-## 🔧 Development
-
-```bash
-# Start dev server
-npm run dev
-
-# Open http://localhost:3000
+### Compact Layout
+```typescript
+spacing: { linkGridColumns: 5, linkGapHorizontal: '2rem' }
 ```
 
 ## 📄 License
 
-MIT - Feel free to use this for your own portfolio!
+MIT License - feel free to use this for your own startpage!
 
-## 👤 Author
+## 🤝 Contributing
 
-**Jack** - Trader & Developer
+Feel free to open issues or submit PRs if you have improvements!
+
+## ⭐ Show Your Support
+
+Give a ⭐️ if you like this project!
 
 ---
 
-Built with ❤️ and Next.js
+Made with ❤️ using Next.js
