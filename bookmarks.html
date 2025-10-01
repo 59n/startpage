@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmarks - Start Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="top-nav">
+        <a href="index.html">Portfolio</a>
+        <a href="bookmarks.html" class="active">Bookmarks</a>
+        <a href="stats.html">Stats</a>
+    </nav>
+
+    <!-- Bookmarks Container -->
+    <div class="bookmarks-container">
+        
+        <!-- Search Section -->
+        <div class="search-section">
+            <div class="home-branding">
+                <div class="home-text">
+                    <span class="letter">H</span>
+                    <span class="letter">O</span>
+                    <span class="letter">M</span>
+                    <span class="letter">E</span>
+                </div>
+            </div>
+            
+            <form class="search-form" id="searchForm" onsubmit="return handleSearch(event)">
+                <div class="search-box">
+                    <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                    <input 
+                        type="text" 
+                        id="searchInput" 
+                        placeholder="Search Google or type a URL..."
+                        autocomplete="off"
+                        autofocus
+                    >
+                    <button type="submit" class="search-btn">Search</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Bookmarks Grid -->
+        <div class="bookmarks-grid">
+            
+            <!-- Bookmarks Category -->
+            <div class="bookmark-category">
+                <h3>BOOKMARKS</h3>
+                <div class="bookmark-links">
+                    <a href="https://youtube.com" target="_blank" class="bookmark-item">
+                        <span class="icon">▶</span>
+                        <span class="label">YouTube</span>
+                    </a>
+                    <a href="https://alpha.com" target="_blank" class="bookmark-item">
+                        <span class="icon">📈</span>
+                        <span class="label">Alpha</span>
+                    </a>
+                    <a href="https://standardnotes.com" target="_blank" class="bookmark-item">
+                        <span class="icon">📝</span>
+                        <span class="label">Standard Notes</span>
+                    </a>
+                    <a href="https://minecraft.com" target="_blank" class="bookmark-item">
+                        <span class="icon">🎮</span>
+                        <span class="label">Minecraft AFK</span>
+                    </a>
+                    <a href="https://reddit.com" target="_blank" class="bookmark-item">
+                        <span class="icon">🔴</span>
+                        <span class="label">Reddit</span>
+                    </a>
+                    <a href="https://github.com" target="_blank" class="bookmark-item">
+                        <span class="icon">🐙</span>
+                        <span class="label">GitHub</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Workspace Category -->
+            <div class="bookmark-category">
+                <h3>WORKSPACE</h3>
+                <div class="bookmark-links">
+                    <a href="https://protonmail.com" target="_blank" class="bookmark-item">
+                        <span class="icon">📧</span>
+                        <span class="label">protonmail</span>
+                    </a>
+                    <a href="https://calendar.google.com" target="_blank" class="bookmark-item">
+                        <span class="icon">📅</span>
+                        <span class="label">calendar</span>
+                    </a>
+                    <a href="https://docs.google.com" target="_blank" class="bookmark-item">
+                        <span class="icon">📄</span>
+                        <span class="label">docs</span>
+                    </a>
+                    <a href="https://drive.google.com" target="_blank" class="bookmark-item">
+                        <span class="icon">💾</span>
+                        <span class="label">drive</span>
+                    </a>
+                    <a href="https://notion.so" target="_blank" class="bookmark-item">
+                        <span class="icon">📋</span>
+                        <span class="label">Notion</span>
+                    </a>
+                    <a href="https://slack.com" target="_blank" class="bookmark-item">
+                        <span class="icon">💬</span>
+                        <span class="label">Slack</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Media Category -->
+            <div class="bookmark-category">
+                <h3>MEDIA</h3>
+                <div class="bookmark-links">
+                    <a href="https://twitter.com" target="_blank" class="bookmark-item">
+                        <span class="icon">𝕏</span>
+                        <span class="label">twitter</span>
+                    </a>
+                    <a href="https://wsj.com" target="_blank" class="bookmark-item">
+                        <span class="icon">📰</span>
+                        <span class="label">Wall Street Journal</span>
+                    </a>
+                    <a href="https://movies.com" target="_blank" class="bookmark-item">
+                        <span class="icon">🎬</span>
+                        <span class="label">Movie Box Pro</span>
+                    </a>
+                    <a href="https://spotify.com" target="_blank" class="bookmark-item">
+                        <span class="icon">🎵</span>
+                        <span class="label">Spotify</span>
+                    </a>
+                    <a href="https://netflix.com" target="_blank" class="bookmark-item">
+                        <span class="icon">🎥</span>
+                        <span class="label">Netflix</span>
+                    </a>
+                    <a href="https://twitch.tv" target="_blank" class="bookmark-item">
+                        <span class="icon">🎮</span>
+                        <span class="label">Twitch</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Trading Category -->
+            <div class="bookmark-category">
+                <h3>TRADING</h3>
+                <div class="bookmark-links">
+                    <a href="https://tradingview.com" target="_blank" class="bookmark-item">
+                        <span class="icon">📊</span>
+                        <span class="label">TradingView</span>
+                    </a>
+                    <a href="https://coinbase.com" target="_blank" class="bookmark-item">
+                        <span class="icon">₿</span>
+                        <span class="label">Coinbase</span>
+                    </a>
+                    <a href="https://binance.com" target="_blank" class="bookmark-item">
+                        <span class="icon">🔶</span>
+                        <span class="label">Binance</span>
+                    </a>
+                    <a href="https://finance.yahoo.com" target="_blank" class="bookmark-item">
+                        <span class="icon">💹</span>
+                        <span class="label">Yahoo Finance</span>
+                    </a>
+                    <a href="https://bloomberg.com" target="_blank" class="bookmark-item">
+                        <span class="icon">📈</span>
+                        <span class="label">Bloomberg</span>
+                    </a>
+                    <a href="https://investing.com" target="_blank" class="bookmark-item">
+                        <span class="icon">💰</span>
+                        <span class="label">Investing.com</span>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function handleSearch(event) {
+            event.preventDefault();
+            const query = document.getElementById('searchInput').value.trim();
+            
+            if (query) {
+                // Check if input looks like a URL
+                if (query.includes('.') && !query.includes(' ')) {
+                    // Add protocol if missing
+                    const url = query.startsWith('http') ? query : 'https://' + query;
+                    window.location.href = url;
+                } else {
+                    // Search with Google
+                    window.location.href = 'https://www.google.com/search?q=' + encodeURIComponent(query);
+                }
+            }
+            
+            return false;
+        }
+
+        // Keyboard shortcuts
+        document.addEventListener('keydown', (e) => {
+            // Focus search on '/' key
+            if (e.key === '/' && document.activeElement !== document.getElementById('searchInput')) {
+                e.preventDefault();
+                document.getElementById('searchInput').focus();
+            }
+        });
+    </script>
+</body>
+</html>

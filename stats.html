@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stats Dashboard - Nerd Mode</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="top-nav">
+        <a href="index.html">Portfolio</a>
+        <a href="bookmarks.html">Bookmarks</a>
+        <a href="stats.html" class="active">Stats</a>
+    </nav>
+
+    <!-- Stats Container -->
+    <div class="stats-container">
+        
+        <!-- Main Time Display -->
+        <section class="datetime-section">
+            <div class="datetime-box">
+                <span class="label">datetime</span>
+                <div class="time" id="clock">19:08:14</div>
+                <div class="date" id="date">wednesday, october 1, 2025</div>
+            </div>
+        </section>
+
+        <!-- Stats Grid -->
+        <section class="stats-grid">
+            
+            <!-- Performance Stats -->
+            <div class="stat-card">
+                <span class="label">performance</span>
+                <div class="stat-item">
+                    <span>page load</span>
+                    <span id="load" class="stat-value">265 ms</span>
+                </div>
+                <div class="stat-item">
+                    <span>dom content</span>
+                    <span id="domContent" class="stat-value">189 ms</span>
+                </div>
+                <div class="stat-item">
+                    <span>first paint</span>
+                    <span id="firstPaint" class="stat-value">156 ms</span>
+                </div>
+                <div class="stat-item">
+                    <span>network ping</span>
+                    <span id="ping" class="stat-value">29 ms</span>
+                </div>
+            </div>
+
+            <!-- Display Stats -->
+            <div class="stat-card">
+                <span class="label">display</span>
+                <div class="stat-item">
+                    <span>resolution</span>
+                    <span id="resolution" class="stat-value">2088 x 1334</span>
+                </div>
+                <div class="stat-item">
+                    <span>viewport</span>
+                    <span id="viewport" class="stat-value">1920 x 1080</span>
+                </div>
+                <div class="stat-item">
+                    <span>pixel ratio</span>
+                    <span id="pixelRatio" class="stat-value">1.0</span>
+                </div>
+                <div class="stat-item">
+                    <span>color depth</span>
+                    <span id="colorDepth" class="stat-value">24-bit</span>
+                </div>
+                <div class="stat-item">
+                    <span>fps</span>
+                    <span id="fps" class="stat-value">120</span>
+                </div>
+            </div>
+
+            <!-- System Stats -->
+            <div class="stat-card">
+                <span class="label">system</span>
+                <div class="stat-item">
+                    <span>platform</span>
+                    <span id="platform" class="stat-value">MacOS</span>
+                </div>
+                <div class="stat-item">
+                    <span>browser</span>
+                    <span id="browser" class="stat-value">Chrome</span>
+                </div>
+                <div class="stat-item">
+                    <span>cpu cores</span>
+                    <span id="cores" class="stat-value">8</span>
+                </div>
+                <div class="stat-item">
+                    <span>memory</span>
+                    <span id="memory" class="stat-value">8 GB</span>
+                </div>
+                <div class="stat-item">
+                    <span>online</span>
+                    <span id="online" class="stat-value">✓</span>
+                </div>
+            </div>
+
+            <!-- Network Stats -->
+            <div class="stat-card">
+                <span class="label">network</span>
+                <div class="stat-item">
+                    <span>connection</span>
+                    <span id="connection" class="stat-value">4g</span>
+                </div>
+                <div class="stat-item">
+                    <span>downlink</span>
+                    <span id="downlink" class="stat-value">10 Mbps</span>
+                </div>
+                <div class="stat-item">
+                    <span>rtt</span>
+                    <span id="rtt" class="stat-value">50 ms</span>
+                </div>
+                <div class="stat-item">
+                    <span>save data</span>
+                    <span id="saveData" class="stat-value">off</span>
+                </div>
+            </div>
+
+            <!-- Battery Stats -->
+            <div class="stat-card">
+                <span class="label">battery</span>
+                <div class="stat-item">
+                    <span>level</span>
+                    <span id="batteryLevel" class="stat-value">--</span>
+                </div>
+                <div class="stat-item">
+                    <span>charging</span>
+                    <span id="batteryCharging" class="stat-value">--</span>
+                </div>
+                <div class="stat-item">
+                    <span>time to full</span>
+                    <span id="chargingTime" class="stat-value">--</span>
+                </div>
+                <div class="stat-item">
+                    <span>time to empty</span>
+                    <span id="dischargingTime" class="stat-value">--</span>
+                </div>
+            </div>
+
+            <!-- Session Stats -->
+            <div class="stat-card">
+                <span class="label">session</span>
+                <div class="stat-item">
+                    <span>time on page</span>
+                    <span id="timeOnPage" class="stat-value">0s</span>
+                </div>
+                <div class="stat-item">
+                    <span>clicks</span>
+                    <span id="clicks" class="stat-value">0</span>
+                </div>
+                <div class="stat-item">
+                    <span>key presses</span>
+                    <span id="keyPresses" class="stat-value">0</span>
+                </div>
+                <div class="stat-item">
+                    <span>scroll depth</span>
+                    <span id="scrollDepth" class="stat-value">0%</span>
+                </div>
+            </div>
+
+            <!-- Geolocation Stats -->
+            <div class="stat-card">
+                <span class="label">location</span>
+                <div class="stat-item">
+                    <span>language</span>
+                    <span id="language" class="stat-value">en-US</span>
+                </div>
+                <div class="stat-item">
+                    <span>timezone</span>
+                    <span id="timezone" class="stat-value">UTC-5</span>
+                </div>
+                <div class="stat-item">
+                    <span>cookie enabled</span>
+                    <span id="cookieEnabled" class="stat-value">✓</span>
+                </div>
+                <div class="stat-item">
+                    <span>do not track</span>
+                    <span id="doNotTrack" class="stat-value">off</span>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="stat-card links-card">
+                <span class="label">quick links</span>
+                <div class="quick-links">
+                    <a href="https://youtube.com" target="_blank">> YouTube</a>
+                    <a href="https://twitter.com" target="_blank">> Twitter</a>
+                    <a href="https://github.com" target="_blank">> GitHub</a>
+                    <a href="https://calendar.google.com" target="_blank">> Calendar</a>
+                    <a href="https://docs.google.com" target="_blank">> Docs</a>
+                    <a href="https://drive.google.com" target="_blank">> Drive</a>
+                </div>
+            </div>
+
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
