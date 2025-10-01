@@ -40,14 +40,14 @@ export const config = {
   // Links Configuration
   links: [
     { name: 'YouTube', url: 'https://youtube.com', icon: 'youtube' },
-    { name: 'Trading', url: 'https://tradingview.com', icon: 'chart' },
-    { name: 'Twitter', url: 'https://twitter.com', icon: 'twitter' },
-    { name: 'Notes', url: 'https://notion.so', icon: 'file' },
-    { name: 'Mail', url: 'https://gmail.com', icon: 'mail' },
-    { name: 'Drive', url: 'https://drive.google.com', icon: 'drive' },
-    { name: 'Calendar', url: 'https://calendar.google.com', icon: 'calendar' },
-    { name: 'Docs', url: 'https://docs.google.com', icon: 'docs' },
-    { name: 'Movies', url: 'https://netflix.com', icon: 'film' },
+    { name: 'Trading', url: 'https://alphaticks.projectx.com', icon: 'chart' },
+    { name: 'Twitter', url: 'https://x.com', icon: 'twitter' },
+    { name: 'Notes', url: 'https://app.standardnotes.com', icon: 'file' },
+    { name: 'Mail', url: 'https://mail.proton.me', icon: 'mail' },
+    { name: 'Drive', url: 'https://drive.proton.me', icon: 'drive' },
+    { name: 'Calendar', url: 'https://calendar.proton.me', icon: 'calendar' },
+    { name: 'Docs', url: 'https://docs.proton.me', icon: 'docs' },
+    { name: 'Movies', url: 'http://movieboxpro.app', icon: 'film' },
   ],
 
   // Link Behavior
