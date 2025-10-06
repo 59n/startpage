@@ -13,8 +13,8 @@ export const config = {
   // Typography
   typography: {
     fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", "Inter", sans-serif',
-    clockSize: '4.8rem',
-    dateSize: '1.2rem',
+    clockSize: '6.5rem',
+    dateSize: '1.5rem',
     statLabelSize: '0.7rem',
     statValueSize: '0.85rem',
     linkSize: '0.875rem',

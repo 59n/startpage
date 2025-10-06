@@ -3,8 +3,8 @@ import './globals.css'
 import { config } from '@/config'
 
 export const metadata: Metadata = {
-  title: 'Dashboard - Home',
-  description: 'Personal dashboard',
+  title: '~',
+  description: 'Dashboard',
 }
 
 export default function RootLayout({

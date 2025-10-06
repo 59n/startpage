@@ -37,8 +37,8 @@ body {
 
 /* DateTime Section */
 .datetime-box {
-  background: var(--bg-secondary);
-  border: 1px solid var(--border);
+  /* #background: var(--bg-secondary);
+  #border: 1px solid var(--border); */
   border-radius: var(--border-radius);
   padding: 2.5rem 2rem;
   text-align: center;
