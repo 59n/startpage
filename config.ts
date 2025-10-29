@@ -48,6 +48,9 @@ export const config = {
     { name: 'Calendar', url: 'https://calendar.proton.me', icon: 'calendar' },
     { name: 'Docs', url: 'https://docs.proton.me', icon: 'docs' },
     { name: 'Movies', url: 'http://movieboxpro.app', icon: 'film' },
+    { name: 'NAS', url: 'https://thenas.us', icon: 'x' },
+    { name: 'Portainer', url: 'https://portainer.thenas.us', icon: 'x' },
+    { name: 'Crafty', url: 'https://crafty.thenas.us', icon: 'x' },
   ],
 
   // Link Behavior
